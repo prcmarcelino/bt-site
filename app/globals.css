@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f9fa;
+  --foreground: #0f172a;
+  /* BT design system from code.html */
+  --primary: #f20da6;
+  --primary-dark: #c20a85;
+  --secondary: #1e293b;
+  --accent: #facc15;
+  --background-light: #f8f9fa;
+  --background-dark: #0f172a;
+  --surface-light: #ffffff;
+  --surface-dark: #1e293b;
+  --footer-bg: #0b1120;
+  --accent-gold: #c5a059;
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--background-light);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-footer-bg: var(--footer-bg);
+  --color-surface-light: var(--surface-light);
+  --color-surface-dark: var(--surface-dark);
+  --font-sans: var(--font-manrope);
 }
 
 body {
-  background: var(--background);
+  background: var(--background-light);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), "Manrope", system-ui, sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #f20da6, #7e22ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-metallic {
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

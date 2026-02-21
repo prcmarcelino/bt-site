@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BT Comunicação — Site
 
-## Getting Started
+Site institucional da BT Comunicação (agência de marketing e relações públicas). Next.js, TypeScript e Tailwind CSS, preparado para deploy na Vercel.
 
-First, run the development server:
+## Desenvolvimento
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variáveis de ambiente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Crie um arquivo `.env.local` na raiz do projeto (e configure as mesmas variáveis no painel da Vercel para produção):
 
-## Learn More
+| Variável | Descrição |
+|----------|-----------|
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Número do WhatsApp com DDI, sem espaços nem símbolos (ex: `5511999999999`). Usado nos botões "Fale no WhatsApp". |
 
-To learn more about Next.js, take a look at the following resources:
+Se não for definida, será usado um número placeholder.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build e deploy (Vercel)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm run start
+```
 
-## Deploy on Vercel
+Na [Vercel](https://vercel.com), conecte o repositório e faça o deploy. Configure `NEXT_PUBLIC_WHATSAPP_NUMBER` em **Settings → Environment Variables**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Estrutura
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` — Layout, página inicial e estilos globais
+- `components/layout/` — Header e Footer
+- `components/home/` — Seções da homepage (Hero, Serviços, Sobre, etc.)
+- `components/ui/` — Tag, Button, Card
+- `public/images/` — Imagens estáticas (substitua placeholders quando tiver os assets finais)
+
+## Licença
+
+Projeto privado — BT Comunicação.
