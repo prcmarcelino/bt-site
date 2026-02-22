@@ -19,7 +19,7 @@ interface HeaderProps {
 }
 
 const WHATSAPP_NUMBER =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511999999999";
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511995060544";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const DEFAULT_TAGLINE = "Agência de Propaganda e Publicidade";

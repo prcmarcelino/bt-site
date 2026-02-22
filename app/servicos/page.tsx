@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 
 const WHATSAPP_NUMBER =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511999999999";
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511995060544";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const services = [
@@ -130,10 +130,7 @@ const accentStyles = {
 export default function ServicosPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-      <Header
-        tagline="Agência de Propaganda e Marketing Digital"
-        logoBlack
-      />
+      <Header tagline="Agência de Propaganda e Marketing Digital" />
       <main id="main" className="flex-1">
         {/* Hero */}
         <section className="relative px-6 py-20 lg:py-32">
@@ -218,7 +215,7 @@ export default function ServicosPage() {
                   </div>
                   <Link
                     href={service.buttonHref}
-                    className={`mt-auto flex w-full items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white py-3 text-sm font-bold text-gray-900 transition-colors dark:border-white/20 dark:bg-white/5 dark:text-white ${style.button}`}
+                    className={`mt-auto flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-800 bg-slate-800 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:shadow-lg ${style.button}`}
                   >
                     {service.buttonText}
                     <ArrowRight className="h-5 w-5" />
