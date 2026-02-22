@@ -130,7 +130,7 @@ const accentStyles = {
 export default function ServicosPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-      <Header tagline="Agência de Propaganda e Marketing Digital" />
+      <Header />
       <main id="main" className="flex-1">
         {/* Hero */}
         <section className="relative px-6 py-20 lg:py-32">
