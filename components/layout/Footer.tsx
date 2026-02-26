@@ -1,12 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
-
-const FOOTER_NAV = [
-  { label: "Início", href: "/" },
-  { label: "Serviços", href: "/#servicos" },
-  { label: "Cases", href: "/#clientes" },
-  { label: "Blog", href: "#" },
-];
 
 const SOCIAL = [
   { label: "Instagram", href: "#", icon: Instagram },
@@ -20,15 +14,20 @@ export function Footer() {
     <footer className="bg-[var(--footer-bg)] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 items-start mb-16">
-          <div className="md:col-span-5">
+          <div className="md:col-span-7">
             <Link
               href="/"
               className="flex flex-col items-start justify-center leading-none mb-6"
+              aria-label="BT Comunicação - Página inicial"
             >
-              <span className="text-4xl font-extrabold tracking-tight drop-shadow-sm text-gold-gradient">
-                BT
-              </span>
-              <span className="mt-1 ml-1 text-[0.5rem] font-bold tracking-widest uppercase text-slate-400">
+              <Image
+                src="/logo_bt.png"
+                alt="BT Comunicação"
+                width={160}
+                height={64}
+                className="h-14 w-auto object-contain sm:h-16"
+              />
+              <span className="mt-1 text-[0.5rem] font-bold tracking-widest uppercase text-slate-400">
                 Agência de Propaganda e Publicidade
               </span>
             </Link>
@@ -38,26 +37,7 @@ export function Footer() {
               ao futuro.
             </p>
           </div>
-          <div className="md:col-span-3 flex justify-start md:justify-center">
-            <div className="flex flex-col">
-              <h4 className="font-bold text-sm tracking-wider text-white uppercase mb-6">
-                Navegação
-              </h4>
-              <ul className="space-y-3">
-                {FOOTER_NAV.map(({ label, href }) => (
-                  <li key={label}>
-                    <Link
-                      href={href}
-                      className="text-slate-400 hover:text-white transition-colors text-sm"
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="md:col-span-4 flex justify-start md:justify-end">
+          <div className="md:col-span-5 flex justify-start md:justify-end">
             <div className="flex flex-col">
               <h4 className="font-bold text-sm tracking-wider text-white uppercase mb-6">
                 Social

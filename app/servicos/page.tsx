@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export const metadata: Metadata = {
   title: "Nossos Serviços - BT Comunicação",
@@ -315,6 +316,7 @@ export default function ServicosPage() {
                 rel="noopener noreferrer"
                 className="flex min-w-[200px] items-center justify-center gap-2 rounded-lg bg-slate-900 px-6 py-4 text-base font-bold text-white transition-transform hover:scale-105 hover:shadow-lg"
               >
+                <WhatsAppIcon className="h-5 w-5" />
                 Falar com um Consultor
               </a>
               <Link

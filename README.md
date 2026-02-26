@@ -33,10 +33,15 @@ Na [Vercel](https://vercel.com), conecte o repositório e faça o deploy. Config
 ## Estrutura
 
 - `app/` — Layout, página inicial e estilos globais
+- `app/favicon.ico` — Favicon (aba do navegador)
+- `app/icon.png` — Ícone PNG 96×96 (pwa/navegadores)
+- `app/apple-icon.png` — Ícone Apple Touch (home screen)
 - `components/layout/` — Header e Footer
 - `components/home/` — Seções da homepage (Hero, Serviços, Sobre, etc.)
 - `components/ui/` — Tag, Button, Card
-- `public/images/` — Imagens estáticas (substitua placeholders quando tiver os assets finais)
+- `public/` — Assets estáticos:
+  - `logo_bt.png` — Logo principal (header e imagem Open Graph / redes sociais)
+  - `favicon.ico`, `favicon.svg`, `favicon-96x96.png` — Origens dos ícones (os usados pelo site ficam em `app/`)
 
 ## Licença
 

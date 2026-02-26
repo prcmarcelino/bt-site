@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     title: "BT Comunicação - Estratégia Brasil e EUA",
     description:
       "Comunicação estratégica para posicionar sua marca sem fronteiras.",
+    images: [{ url: "/logo_bt.png", width: 512, height: 512, alt: "BT Comunicação" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "BT Comunicação - Estratégia Brasil e EUA",
+    description: "Comunicação estratégica para posicionar sua marca sem fronteiras.",
+    images: ["/logo_bt.png"],
   },
 };
 

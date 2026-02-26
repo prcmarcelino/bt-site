@@ -1,9 +1,7 @@
 import Image from "next/image";
 
-const SABRINA_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAZRKdgQQ2US6vvZ0PATSA6w2dZpnvx_frWhXcTGNAZmto2nliU-sqDBifAPtn3OyRBeo2cM5BXVqg4S0NLMMboUyKoL9wS0cWvTER0EhjMuKKqt1QmPLJ_EOlVS4a0lK0wOgEls-P8mS0PKbLT3tfcVDJrmN4t_0NKhtbKtLfp4i0G2jCVnI2UiKUTcFtq-X8ey8ctr092Qz-8nvaopEDY_ekamE1iYBbQmJ-frDSN6fJdEjCemfaL1Y-4jn_OaJbPT_j9uYZ5ZRio";
-const ELIANA_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuC4DERR7PIPGYeCgCby6qvAGCnZ_M1LmHkuUh6ys_yu6dg8DqUZzicXku7pCWGi3FIWpcCZWXQSovjizAEHETuc56qfFku3faNTuiYfX3xwtMYrJ9frCRyqK5o4DiG-WkK-rf8E7_rU9ENGQqucQJzC7bX3WjtNxBFmhsyHo3p4thIzVsB1BqXd4oxPztGdDbijAPdSlNtEiJdguMwQV7a0gS18wVquomMD05ywE7AAGuGt1g1NfOeIO3Mkqu2312ob7cAPgotKaM_A";
+const SABRINA_IMG = "/images/sabrina_ishizu.jpeg";
+const ELIANA_IMG = "/images/eliana_nakakubo.jpeg";
 
 const STATS = [
   { value: "15+", label: "Anos de Mercado" },
@@ -27,6 +25,7 @@ export function AboutSection() {
                   alt="Sabrina Ishizu - sócia BT Comunicação"
                   width={280}
                   height={373}
+                  unoptimized
                   className="rounded-2xl shadow-xl w-full object-cover aspect-[3/4] grayscale hover:grayscale-0 transition-all duration-500 border-4 border-white"
                 />
                 <div className="absolute -bottom-1 -left-10 z-40 transform -rotate-3">

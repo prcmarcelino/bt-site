@@ -1,20 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle, X, Menu } from "lucide-react";
+import Image from "next/image";
+import { X, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 const NAV_LINKS = [
   { label: "Início", href: "/" },
   { label: "Serviços", href: "/servicos" },
-  { label: "Cases", href: "#clientes" },
-  { label: "Blog", href: "#" },
 ];
 
 interface HeaderProps {
-  /** Tagline abaixo do logo. Se não informado, usa o padrão da home. */
+  /** Tagline abaixo do logo (opcional; o logo já exibe "COMUNICAÇÃO"). */
   tagline?: string;
-  /** Se true, logo BT em preto (página de serviços). Se false, logo em dourado. */
+  /** @deprecated Logo é sempre a imagem logo_bt.png */
   logoBlack?: boolean;
 }
 
@@ -24,7 +24,7 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const DEFAULT_TAGLINE = "Agência de Propaganda e Publicidade";
 
-export function Header({ tagline = DEFAULT_TAGLINE, logoBlack = false }: HeaderProps = {}) {
+export function Header({ tagline = DEFAULT_TAGLINE, logoBlack }: HeaderProps = {}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Fecha menu ao redimensionar para desktop
@@ -50,16 +50,17 @@ export function Header({ tagline = DEFAULT_TAGLINE, logoBlack = false }: HeaderP
       >
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex h-24 justify-between items-center">
-            {/* Logo */}
-            <Link href="/" className="flex flex-col items-start justify-center leading-none">
-              <span
-                className={`text-4xl font-extrabold tracking-tight drop-shadow-sm ${
-                  logoBlack ? "text-slate-900" : "text-gold-gradient"
-                }`}
-              >
-                BT
-              </span>
-              <span className="mt-0.5 text-[0.5rem] font-bold tracking-widest uppercase text-slate-500">
+            {/* Logo + slogan */}
+            <Link href="/" className="flex flex-col items-start justify-center shrink-0 leading-none" aria-label="BT Comunicação - Página inicial">
+              <Image
+                src="/logo_bt.png"
+                alt="BT Comunicação"
+                width={180}
+                height={72}
+                className="h-14 w-auto object-contain sm:h-16"
+                priority
+              />
+              <span className="mt-1 text-[0.5rem] font-bold tracking-widest uppercase text-slate-500">
                 {tagline}
               </span>
             </Link>
@@ -85,7 +86,7 @@ export function Header({ tagline = DEFAULT_TAGLINE, logoBlack = false }: HeaderP
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-8 py-3 text-sm font-bold transition-all shadow-md"
               >
-                <MessageCircle className="text-lg" aria-hidden />
+                <WhatsAppIcon className="h-5 w-5" />
                 Falar no WhatsApp
               </a>
             </div>
@@ -129,11 +130,16 @@ export function Header({ tagline = DEFAULT_TAGLINE, logoBlack = false }: HeaderP
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
-            className="flex flex-col items-start leading-none"
+            className="flex flex-col items-start justify-center shrink-0 leading-none"
+            aria-label="BT Comunicação - Página inicial"
           >
-            <span className={`text-3xl font-extrabold tracking-tight ${logoBlack ? "text-slate-900" : "text-gold-gradient"}`}>
-              BT
-            </span>
+            <Image
+              src="/logo_bt.png"
+              alt="BT Comunicação"
+              width={140}
+              height={56}
+              className="h-12 w-auto object-contain"
+            />
             <span className="mt-0.5 text-[0.45rem] font-bold tracking-widest uppercase text-slate-400">
               {tagline}
             </span>
@@ -171,7 +177,7 @@ export function Header({ tagline = DEFAULT_TAGLINE, logoBlack = false }: HeaderP
             onClick={() => setMenuOpen(false)}
             className="flex items-center justify-center gap-2 w-full rounded-full bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-4 text-sm font-bold transition-all shadow-md"
           >
-            <MessageCircle className="w-5 h-5" aria-hidden />
+            <WhatsAppIcon className="h-5 w-5" />
             Falar no WhatsApp
           </a>
         </div>

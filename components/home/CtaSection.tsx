@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 const WHATSAPP_NUMBER =
   process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511995060544";
@@ -25,8 +25,8 @@ export function CtaSection() {
             rel="noopener noreferrer"
             className="group relative inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-[var(--primary)] rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary)] hover:bg-[var(--primary-dark)]"
           >
-            <span className="mr-2">Falar no WhatsApp</span>
-            <MessageCircle className="w-5 h-5" aria-hidden />
+            <WhatsAppIcon className="mr-2 h-5 w-5" />
+            <span>Falar no WhatsApp</span>
           </a>
         </div>
       </div>
