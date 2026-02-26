@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main id="main">
+      <main id="main" className="pt-24">
         <HeroSection />
         <ExpertSection />
         <ServicesSection />

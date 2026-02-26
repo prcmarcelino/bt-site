@@ -45,7 +45,7 @@ export function Header({ tagline = DEFAULT_TAGLINE, logoBlack }: HeaderProps = {
   return (
     <>
       <nav
-        className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md"
+        className="fixed left-0 right-0 top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md"
         aria-label="Navegação principal"
       >
         <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export function Header({ tagline = DEFAULT_TAGLINE, logoBlack }: HeaderProps = {
             </Link>
 
             {/* Nav desktop */}
-            <div className="hidden md:flex flex-grow justify-center items-center space-x-8">
+            <div className="hidden md:flex flex-grow justify-end items-center space-x-8 mr-8">
               {NAV_LINKS.map(({ label, href }) => (
                 <Link
                   key={label}

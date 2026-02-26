@@ -132,7 +132,7 @@ export default function ServicosPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
       <Header />
-      <main id="main" className="flex-1">
+      <main id="main" className="flex-1 pt-24">
         {/* Hero */}
         <section className="relative px-6 py-20 lg:py-32">
           <div
@@ -317,11 +317,11 @@ export default function ServicosPage() {
                 className="flex min-w-[200px] items-center justify-center gap-2 rounded-lg bg-slate-900 px-6 py-4 text-base font-bold text-white transition-transform hover:scale-105 hover:shadow-lg"
               >
                 <WhatsAppIcon className="h-5 w-5" />
-                Falar com um Consultor
+                Falar no WhatsApp
               </a>
               <Link
                 href="/#clientes"
-                className="flex min-w-[200px] items-center justify-center rounded-lg border border-slate-200 bg-white px-6 py-4 text-base font-bold text-slate-900 transition-colors hover:bg-slate-50"
+                className="hidden flex min-w-[200px] items-center justify-center rounded-lg border border-slate-200 bg-white px-6 py-4 text-base font-bold text-slate-900 transition-colors hover:bg-slate-50"
               >
                 Ver nossos Cases
               </Link>
