@@ -2,11 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Linkedin, Youtube } from "lucide-react";
 
-const SOCIAL = [
-  { label: "Instagram BT Comunicação", href: "https://www.instagram.com/btcomunicacao_?igsh=MTI2Z3N4b3kwMXVh&utm_source=qr", icon: Instagram },
-  { label: "Instagram Eliana Nakakubo", href: "https://www.instagram.com/eliananakakubo?igsh=dXlsMzQzemoyN21t&utm_source=qr", icon: Instagram },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/eliananakakubo", icon: Linkedin },
-  { label: "YouTube", href: "https://www.youtube.com/@eliananakakubo", icon: Youtube },
+const INSTAGRAM_ACCOUNTS = [
+  { label: "BT Comunicação", href: "https://www.instagram.com/btcomunicacao_?igsh=MTI2Z3N4b3kwMXVh&utm_source=qr" },
+  { label: "Eliana Nakakubo", href: "https://www.instagram.com/eliananakakubo?igsh=dXlsMzQzemoyN21t&utm_source=qr" },
+  { label: "Sabrina Ishizu", href: "https://www.instagram.com/eusousabrinabello/" },
+];
+
+const LINKEDIN_ACCOUNTS = [
+  { label: "Eliana Nakakubo", href: "https://www.linkedin.com/in/eliananakakubo" },
+];
+
+const YOUTUBE_ACCOUNTS = [
+  { label: "Eliana Nakakubo", href: "https://www.youtube.com/@eliananakakubo" },
 ];
 
 export function Footer() {
@@ -38,23 +45,62 @@ export function Footer() {
             </p>
           </div>
           <div className="md:col-span-5 flex justify-start md:justify-end">
-            <div className="flex flex-col">
-              <h4 className="font-bold text-sm tracking-wider text-white uppercase mb-6">
+            <div className="flex flex-col gap-6">
+              <h4 className="font-bold text-sm tracking-wider text-white uppercase mb-2">
                 Social
               </h4>
-              <div className="flex gap-3">
-                {SOCIAL.map(({ label, href, icon: Icon }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 border border-slate-700 rounded-full flex items-center justify-center hover:bg-[var(--primary)] hover:border-[var(--primary)] transition-all text-white"
-                    aria-label={label}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                ))}
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <Instagram className="w-5 h-5 text-slate-400 shrink-0" aria-hidden />
+                  <div className="flex flex-wrap gap-x-4 gap-y-1">
+                    {INSTAGRAM_ACCOUNTS.map(({ label, href }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-slate-400 hover:text-[var(--primary)] transition-colors"
+                        aria-label={`Instagram ${label}`}
+                      >
+                        {label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <Linkedin className="w-5 h-5 text-slate-400 shrink-0" aria-hidden />
+                  <div className="flex flex-wrap gap-x-4 gap-y-1">
+                    {LINKEDIN_ACCOUNTS.map(({ label, href }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-slate-400 hover:text-[var(--primary)] transition-colors"
+                        aria-label={`LinkedIn ${label}`}
+                      >
+                        {label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <Youtube className="w-5 h-5 text-slate-400 shrink-0" aria-hidden />
+                  <div className="flex flex-wrap gap-x-4 gap-y-1">
+                    {YOUTUBE_ACCOUNTS.map(({ label, href }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-slate-400 hover:text-[var(--primary)] transition-colors"
+                        aria-label={`YouTube ${label}`}
+                      >
+                        {label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
