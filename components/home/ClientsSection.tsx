@@ -28,14 +28,14 @@ export function ClientsSection() {
           {CLIENTS.map((client) => (
             <div
               key={client.alt}
-              className="relative w-full h-36 sm:h-44 lg:h-56 flex items-center justify-center transition-all duration-300 cursor-default"
+              className="relative w-full h-36 sm:h-44 lg:h-56 flex items-center justify-center overflow-hidden transition-all duration-300 cursor-default"
             >
               <Image
                 src={client.src}
                 alt={client.alt}
                 fill
                 sizes="(max-width: 640px) 49vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-contain object-center"
+                className="object-contain object-center scale-150"
               />
             </div>
           ))}
