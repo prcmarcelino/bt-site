@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
 
 const SOCIAL = [
-  { label: "Instagram", href: "#", icon: Instagram },
-  { label: "X (Twitter)", href: "#", icon: Twitter },
-  { label: "LinkedIn", href: "#", icon: Linkedin },
-  { label: "Facebook", href: "#", icon: Facebook },
+  { label: "Instagram BT Comunicação", href: "https://www.instagram.com/btcomunicacao_?igsh=MTI2Z3N4b3kwMXVh&utm_source=qr", icon: Instagram },
+  { label: "Instagram Eliana Nakakubo", href: "https://www.instagram.com/eliananakakubo?igsh=dXlsMzQzemoyN21t&utm_source=qr", icon: Instagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/eliananakakubo", icon: Linkedin },
+  { label: "YouTube", href: "https://www.youtube.com/@eliananakakubo", icon: Youtube },
 ];
 
 export function Footer() {
