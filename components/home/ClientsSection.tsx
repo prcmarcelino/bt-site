@@ -1,4 +1,18 @@
-import { Gem } from "lucide-react";
+import Image from "next/image";
+
+const CLIENTS = [
+  { src: "/images/clientes/ig.png", alt: "iG" },
+  { src: "/images/clientes/uol.png", alt: "UOL" },
+  { src: "/images/clientes/pediatra-brasileiro.png", alt: "Pediatra Brasileiro" },
+  { src: "/images/clientes/achismos-tv.png", alt: "Achismos TV" },
+  { src: "/images/clientes/tiktok.png", alt: "TikTok" },
+  { src: "/images/clientes/night-n-day-pediatrics.png", alt: "Night'n Day Pediatrics" },
+  { src: "/images/clientes/ansiedade-solucoes.png", alt: "Ansiedade Soluções" },
+  { src: "/images/clientes/ser-mamae-miami.png", alt: "Ser Mamãe em Miami" },
+  { src: "/images/clientes/selecto.png", alt: "Selecto" },
+  { src: "/images/clientes/portal-neurodivergentes.png", alt: "Portal dos Neurodivergentes" },
+  { src: "/images/clientes/record.png", alt: "Record" },
+];
 
 export function ClientsSection() {
   return (
@@ -10,33 +24,21 @@ export function ClientsSection() {
         <p className="text-slate-500 font-medium mb-10">
           Empresas que confiam na nossa estratégia
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-70">
-          <div className="h-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
-            <span className="text-2xl font-black text-slate-800">NEXUS</span>
-          </div>
-          <div className="h-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
-            <span className="text-2xl font-bold text-slate-800 italic">Vanguard</span>
-          </div>
-          <div className="h-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
-            <span className="text-xl font-bold text-slate-800 tracking-widest border-2 border-slate-800 px-2">
-              ELEVATE
-            </span>
-          </div>
-          <div className="h-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
-            <div className="flex items-center gap-1 font-bold text-slate-800">
-              <Gem className="w-5 h-5" /> LUXO
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-0 items-center justify-items-center">
+          {CLIENTS.map((client) => (
+            <div
+              key={client.alt}
+              className="relative w-full h-36 sm:h-44 lg:h-56 flex items-center justify-center transition-all duration-300 cursor-default"
+            >
+              <Image
+                src={client.src}
+                alt={client.alt}
+                fill
+                sizes="(max-width: 640px) 49vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-contain object-center"
+              />
             </div>
-          </div>
-          <div className="h-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
-            <span className="text-2xl font-bold text-slate-800 font-mono">
-              Global<span className="text-[var(--primary)]">.io</span>
-            </span>
-          </div>
-          <div className="h-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
-            <span className="text-xl font-semibold text-slate-800">
-              Strate<span className="font-light">gy</span>
-            </span>
-          </div>
+          ))}
         </div>
       </div>
     </section>
