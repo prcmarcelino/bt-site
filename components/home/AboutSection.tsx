@@ -44,7 +44,7 @@ export function AboutSection() {
                   height={373}
                   className="rounded-2xl shadow-2xl w-full object-cover aspect-[3/4] grayscale hover:grayscale-0 transition-all duration-500 border-4 border-white"
                 />
-                <div className="absolute -top-2 -right-10 z-40 transform rotate-3">
+                <div className="absolute -top-8 -right-10 z-40 transform rotate-3">
                   <div className="bg-white/90 backdrop-blur px-4 py-2 rounded-lg shadow-sm border-r-4 border-[var(--secondary)]">
                     <p className="text-2xl font-extrabold text-[var(--secondary)] tracking-tight">
                       Eliana <span className="text-[var(--primary)] font-light">Nakakubo</span>
